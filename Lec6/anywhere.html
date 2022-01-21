@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript">
+    // ****************************************************
+    // The event handler function to display the message
+
+    function displayIt(evt) {
+      var dom = document.getElementById("message");
+      dom.style.left = (evt.clientX - 130) + "px";
+      dom.style.top = (evt.clientY - 25) + "px";
+      dom.style.visibility = "visible";
+    }
+
+    // ****************************************************
+    // The event handler function to hide the message
+
+    function hideIt() {
+      document.getElementById("message").style.visibility =
+        "hidden";
+    }
+
+    // ****************************************************
+    // -->
+  </script>
+</head>
+
+<body onmousedown="displayIt(event)" ;
+      onmouseup="hideIt();">
+<p>
+      <span id="message"
+            style="color: red; visibility: hidden;
+                     position: relative;
+                     font-size: 20pt; font-style: italic;
+                     font-weight: bold;">
+         Please don't click here!
+      </span>
+  <br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/><br/><br/><br/>
+</p>
+</body>
+</html>
