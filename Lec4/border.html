@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<h1 id="name" >EslamGhazy</h1>
+
+<script type="text/javascript">
+
+  var bordersize;
+  bordersize = prompt("Select a table border size \n" +
+    "0 (no border)," +
+    "1 (1 pixel border), " +
+    "4 (4 pixel border), " +
+    "8 (8 pixel border)");
+
+  switch (bordersize) {
+    case "0":
+      document.write("<table>");
+      break;
+    case "1":
+      document.write("<table border = '1'>");
+      break;
+    case "4":
+      document.write("<table border = '4'>");
+      break;
+    case "8":
+      document.write("<table border = '8'>");
+      break;
+    default:
+      document.write("Error - invalid choice: ", bordersize, "<br />");
+  }
+
+  document.write("<caption> 2003 NFL Divisional Winners </caption>");
+  document.write("<tr>",
+    "<th />",
+    "<th> American Conference </th>",
+    "<th> National Conference </th>",
+    "</tr>",
+    "<tr>",
+    "<th> East </th>",
+    "<td> New England Patriots </td>",
+    "<td> Philadelphia Eagles </td>",
+    "</tr>",
+    "<tr>",
+    "<th> North </th>",
+    "<td> Baltimore Ravens </td>",
+    "<td> Green Bay Packers </td>",
+    "</tr>",
+    "<tr>",
+    "<th> West </th>",
+    "<td> Kansas City Chiefs </td>",
+    "<td> St. Louis Rams </td>",
+    "</tr>",
+    "<tr>",
+    "<th> South </th>",
+    "<td> Indianapolis Colts </td>",
+    "<td> Carolina Panthers </td>",
+    "</tr>",
+    "</table>");
+
+</script>
+
+
+<!--<script> </script>-->
+
+<script src="js/main.js"></script>
+<!--<script src="js/main.js"></script>-->
+
+
+
+
+</body>
+</html>

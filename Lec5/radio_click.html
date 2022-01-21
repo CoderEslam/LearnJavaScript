@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<h1> Cessna single-engine airplane descriptions </h1>
+<form id = "myForm"  action = "handler">
+  <p>
+    <input type = "radio"  name = "planeButton"  value = "152" onclick = "planeChoice(152)" />Model 152
+    <br />
+    <input type = "radio"  name = "planeButton"  value = "172" onclick = "planeChoice(172)" />Model 172 (Skyhawk)
+    <br />
+    <input type = "radio"  name = "planeButton"  value = "182" onclick = "planeChoice(182)" />Model 182 (Skylane)
+    <br />
+    <input type = "radio"  name = "planeButton"  value = "210" onclick = "planeChoice(210)" />Model 210 (Centurian)
+  </p>
+</form>
+
+
+<script type = "text/javascript">
+  // The event handler for a radio button collection
+  function planeChoice (plane) {
+// Produce an alert message about the chosen airplane
+    switch (plane) {
+      case 152:
+        alert("A small two-place airplane for flight training");
+        break;
+      case 172:
+        alert("The smaller of two four-place airplanes");
+        break;
+      case 182:
+        alert("The larger of two four-place airplanes");
+        break;
+      case 210:
+        alert("A six-place high-performance airplane");
+        break;
+      default:
+        alert("Error in JavaScript function planeChoice");
+        break;
+    }
+  }
+</script>
+
+</body>
+</html>

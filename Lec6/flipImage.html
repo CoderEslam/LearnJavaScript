@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<body>
+<form action="">
+  <div id="saturn" style="position: relative; visibility: visible;">
+    <img src="saturn.png" alt="(Pictures of Saturn)"/>
+  </div>
+  <p>
+    <br/>
+    <input type="button" value="Toggle Saturn" onclick="flipImag()"/>
+  </p>
+</form>
+
+<script>
+  function flipImag() {
+    var dom = document.getElementById("saturn").style;
+// Flip the visibility adjective to whatever it is not now
+    if (dom.visibility == "visible") {
+      dom.visibility = "hidden";
+    } else {
+      dom.visibility = "visible";
+    }
+  }
+</script>
+</body>
+</html>

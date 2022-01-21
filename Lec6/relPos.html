@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style type="text/css">
+
+    .regtext {
+      font: 2em Times
+    }
+
+    /*
+    * relative => relative with original place that it's stay
+    * static => by default static even i but (top, left) didn't do nothing
+    */
+    .spectext {
+      font: 2em Times;
+      color: red;
+      position: relative;
+      top: 15px;
+    }
+  </style>
+</head>
+<body>
+<p class="regtext">Apples are<span class="spectext"> GOOD </span> for you.
+</p>
+
+</body>
+</html>

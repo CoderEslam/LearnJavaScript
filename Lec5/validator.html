@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+</head>
+
+<body>
+<h3> Customer Information </h3>
+<form action="">
+  <p>
+    <input type="text" id="custName" onchange="chkName();"/>
+    Name (last name, first name, middle initial)
+    <br/><br/>
+
+    <input type="text" id="phone"/>
+    Phone number (ddd-ddd-dddd)
+    <br/><br/>
+
+    <input type="reset" id="reset"/>
+    <input type="submit" id="submit"/>
+  </p>
+</form>
+<script type="text/javascript">
+
+  // Set form element object properties to their
+  // corresponding event handler functions
+
+  // The event handler function for the name text box
+
+  function chkName() {
+    var myName = document.getElementById("custName");
+
+// Test the format of the input name
+//  Allow the spaces after the commas to be optional
+//  Allow the period after the initial to be optional
+
+
+    /**
+     * Finds the first substring match in a regular expression search.
+     * @param regexp The regular expression pattern and applicable flags.
+     * search(regexp: string | RegExp): number;
+     */
+    var pos = myName.value.search(/^[A-Z][a-z]+, ?[A-Z][a-z]+, ?[A-Z]\.?$/);
+
+    if (pos != 0) {
+      alert("The name you entered (" + myName.value +
+        ") is not in the correct form. \n" +
+        "The correct form is: " +
+        "last-name, first-name, middle-initial \n" +
+        "Please go back and fix your name");
+      myName.focus();
+      myName.select();
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  // The event handler function for the phone number text box
+
+  function chkPhone() {
+    var myPhone = document.getElementById("phone");
+
+    // Test the format of the input phone number
+
+    var pos = myPhone.value.search(/^\d{3}-\d{3}-\d{4}$/);
+
+    if (pos != 0) {
+      alert("The phone number you entered (" + myPhone.value +
+        ") is not in the correct form. \n" +
+        "The correct form is: ddd-ddd-dddd \n" +
+        "Please go back and fix your phone number");
+      myPhone.focus();
+      myPhone.select();
+      return false;
+    } else
+      return true;
+  }
+
+
+  document.getElementById("custName").onchange = chkName;
+  document.getElementById("phone").onchange = chkPhone;
+
+</script>
+</body>
+</html>

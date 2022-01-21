@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript">
+    // Function params
+    // Parameters: two named parameters and one unnamed parameter
+    // Returns: nothing
+
+    function params(a , b) {
+      document.write("Function params was passed ",
+        arguments.length, " parameter(s) <br />");
+      document.write("Parameter values are: <br />");
+
+      for (var arg = 0; arg < arguments.length; arg++)
+        document.write(arguments[arg], "<br />");
+
+      document.write("<br />");
+
+      document.write("Parameter values are:  <br /> ",arguments.length )
+
+    }
+
+    // -->
+  </script>
+</head>
+<body>
+<script type="text/javascript">
+
+  // A text driver for params
+
+  params("Mozart");
+  params("Mozart", "Beethoven");
+  params("Mozart", "Beethoven", "Tchaikowsky");
+  params("Mozart", "Beethoven", "Tchaikowsky" ,"Eslam");
+
+</script>
+</body>
+</html>

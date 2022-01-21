@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<!--
+ 1  - Dom address
+ 2  - element names
+ 3  - getElementById("pushMe")  , id = "pushMe"
+ -->
+
+
+
+<!-- act as array-->
+<form id  = "Toggel" >
+
+  <input type="checkbox" name="toppings" value="olives"> Olives
+  <input type="checkbox" name="toppings" value="tomato"> Tomato
+  <input type="checkbox" name="toppings" value="tomato"> Tomato
+  <input type="checkbox" name="toppings" value="tomato"> Tomato
+
+
+  <input type="button" name="button" value="botton" onclick="alert('mouse click')" > Tomato
+
+  <input type="button" name="button" value="botton" onclick="Clicked()" > Tomato
+
+
+</form>
+
+<script>  
+
+  // var v = 0
+  // var dom = document.getElementById("Toggel");
+  // for (var i  = 0 ; i < dom.toppings.length ; i++){
+  //   if (dom.toppings[i].checked){
+  //     v++;
+  //   }
+  // }
+  // document.write(dom.toppings.length)
+
+
+function Clicked(){
+
+    console.log("Eslam")
+
+    var v = 0
+    var dom = document.getElementById("Toggel");
+    for (var i  = 0 ; i < dom.toppings.length ; i++){
+      if (dom.toppings[i].checked){
+        v++;
+      }
+    }
+    console.log(v)
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script type = "text/javascript">
+  // Get the current date
+
+  var today = new Date();
+
+  // Fetch the various parts of the date
+
+  var dateString = today.toLocaleString();
+  var day = today.getDay();
+  var month = today.getMonth();
+  var year = today.getFullYear();
+  var timeMilliseconds = today.getTime();
+  var hour = today.getHours();
+  var minute = today.getMinutes();
+  var second = today.getSeconds();
+  var millisecond = today.getMilliseconds();
+
+  // Display the parts
+
+  document.write(
+    "Date: " + dateString + "<br />",
+    "Day: " + day + "<br />",
+    "Month: " + month + "<br />",
+    "Year: " + year + "<br />",
+    "Time in milliseconds: " + timeMilliseconds + "<br />",
+    "Hour: " + hour + "<br />",
+    "Minute: " + minute + "<br />",
+    "Second: " + second + "<br />",
+    "Millisecond: " + millisecond + "<br />");
+
+  // Time a loop
+
+  var dum1 = 1.00149265, product = 1;
+  var start = new Date();
+
+  for (var count = 0; count < 10000; count++)
+    product = product + 1.000002 * dum1 / 1.00001;
+
+  var end = new Date();
+  var diff = end.getTime() - start.getTime();
+  document.write("<br />The loop took " + diff +
+    " milliseconds <br />");
+
+  alert("Good morning "+today.getDate())
+
+  var b =  confirm("Are you sure ?") // return type id boolean
+
+  alert(" Resulte ===== " +b)
+
+
+  // Get the coefficients of the equation from the user
+
+  var a = prompt("What is the value of 'a'? \n", ""); // declare function prompt(message?: string, _default?: string): string | null;
+  var b = prompt("What is the value of 'b'? \n", "");
+  var c = prompt("What is the value of 'c'? \n", "");
+
+  // Compute the square root and denominator of the result
+
+  var root_part = Math.sqrt(b * b - 4.0 * a * c);
+  var denom = 2.0 * a;
+
+  // Compute and display the two roots
+
+  var root1 = (-b + root_part) / denom;
+  var root2 = (-b - root_part) / denom;
+  if ( !isNaN(root1) && !isNaN(root2)){ // isNaN => return true if it empity
+    document.write("The first root is: ", root1, "<br />");
+    document.write("The second root is: ", root2, "<br />");
+  }else {
+    document.write("Nothing to show ");
+  }
+
+</script>
+
+
+
+</body>
+</html>
